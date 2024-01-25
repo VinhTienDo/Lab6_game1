@@ -52,5 +52,6 @@ public class Player : MonoBehaviour
     {
         rigidbody2D.AddForce(Vector2.right * 3, ForceMode2D.Impulse);
     }
+    //test
 
 }
