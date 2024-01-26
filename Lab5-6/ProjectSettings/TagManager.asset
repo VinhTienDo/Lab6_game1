@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - obstacles
+  - coin
   layers:
   - Default
   - TransparentFX
@@ -53,4 +54,7 @@ TagManager:
     locked: 0
   - name: Trap
     uniqueID: 1323670315
+    locked: 0
+  - name: obstacles
+    uniqueID: 1430804777
     locked: 0

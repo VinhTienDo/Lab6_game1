@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,11 +10,16 @@ public class Player : MonoBehaviour
 
     public Rigidbody2D rigidbody2D;
     public GameObject panelEndGame;
-    
+    public GameObject effectPatical;
+    public GameObject coin;
 
-    void Start()
+
+    public void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        Instantiate(effectPatical, gameObject.transform);
+        //Instantiate(coin, gameObject.transform);
+        Instantiate(coin, new Vector3(1, 1, 0), Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -38,7 +43,17 @@ public class Player : MonoBehaviour
             Time.timeScale = 0;
         }
     }
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "coin")
+        {
+            Destroy(collision.gameObject);
+            Instantiate(effectPatical, collision.gameObject.transform.position, 
+                collision.transform.localRotation);
+        }
+        Debug.Log("effectObj" + collision.gameObject.tag);
+    }
+
     public void Jump()
     {
         rigidbody2D.AddForce(Vector2.up * 6, ForceMode2D.Impulse);
