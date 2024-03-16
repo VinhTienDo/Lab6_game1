@@ -3496,6 +3496,7 @@ GameObject:
   - component: {fileID: 778088946}
   - component: {fileID: 778088951}
   - component: {fileID: 778088950}
+  - component: {fileID: 778088952}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3669,6 +3670,18 @@ MonoBehaviour:
   panelEndGame: {fileID: 553443250}
   effectPatical: {fileID: 6875221804331213222, guid: 85cce87d9db6ef84e8424d10f3bf6881, type: 3}
   coin: {fileID: 1177480066756197661, guid: 66e3befd41c60e841b2ef5a31153386c, type: 3}
+--- !u!114 &778088952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778088945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507ecb2fe15172f408a4b4c91968edaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &882026588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4567169152404605004, guid: 66e3befd41c60e841b2ef5a31153386c, type: 3}
